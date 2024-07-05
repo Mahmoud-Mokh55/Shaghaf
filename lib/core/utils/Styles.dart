@@ -59,7 +59,7 @@ TextStyle AUTH_T_textInputHint = SharedStyle.copyWith(
     color: Color(0xFF969696),
     fontWeight: FontWeight.w400,
 );
-
+//.
 
 TextStyle AUTH_T_red = SharedStyle.copyWith(
     fontSize: 12,
