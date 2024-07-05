@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//just for commit jj
+//this is a comment
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
