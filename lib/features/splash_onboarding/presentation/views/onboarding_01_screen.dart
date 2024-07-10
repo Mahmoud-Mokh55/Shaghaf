@@ -31,8 +31,6 @@ class OnboardingScreenBody extends StatelessWidget {
         Spacer(),
         OnboardingSlide1(),
         Spacer(),
-
-
       ],
     );
   }

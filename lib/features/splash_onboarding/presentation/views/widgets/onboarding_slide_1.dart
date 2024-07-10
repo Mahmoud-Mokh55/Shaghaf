@@ -4,6 +4,7 @@ import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 import 'package:shaghaf/core/utils/app_colors.dart';
 import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
+import 'package:shaghaf/features/splash_onboarding/presentation/views/widgets/circular_button.dart';
 
 class OnboardingSlide1 extends StatelessWidget {
   const OnboardingSlide1({super.key});
@@ -41,18 +42,4 @@ class OnboardingSlide1 extends StatelessWidget {
   }
 }
 
-class CircularButton extends StatelessWidget {
-  const CircularButton({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const CircleAvatar(
-      radius: 40,
-      backgroundColor:  AppColors.kCircleButtonColor,
-      child: Icon(
-        Icons.arrow_forward_sharp,
-        size: 35,
-        color: Colors.white,),
-    );
-  }
-}
