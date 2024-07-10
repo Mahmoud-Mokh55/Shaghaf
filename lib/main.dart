@@ -1,28 +1,23 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:shaghaf/core/utils/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      DevicePreview(
+          builder: (context)=>const MyApp()
+      )
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
+      // theme: ThemeData.light().copyWith(),
     );
-  }
-}
-
-//just for commit
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }

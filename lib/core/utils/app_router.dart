@@ -27,8 +27,7 @@ import '../../features/authentication/presentation/views/forget_password_screen.
 import '../../features/splash_onboarding/presentation/views/splash_screen.dart';
 
 abstract class AppRouter {
-
-  static const kSplashView = "/splashView";
+  static const kSplashView = "/";
   static const kOnboard1View = "/onboard1View";
   static const kOnboard2View = "/onboard2View";
   static const kOnboard3View = "/onboard3View";
