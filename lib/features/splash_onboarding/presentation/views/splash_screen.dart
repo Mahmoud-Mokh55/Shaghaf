@@ -38,7 +38,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 fit: BoxFit.fill
               )
             ),
-            child: SvgPicture.asset(Assets.kLogo),
+            alignment: Alignment.center,
+            child: Image.asset(Assets.kLogo)
           )
       ),
     );
