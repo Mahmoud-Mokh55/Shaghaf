@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shaghaf/core/utils/app_colors.dart';
 import 'package:shaghaf/core/utils/app_router.dart';
@@ -37,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 fit: BoxFit.fill
               )
             ),
-            child: Image.asset(Assets.kLogo),
+            child: SvgPicture.asset(Assets.kLogo),
           )
       ),
     );
