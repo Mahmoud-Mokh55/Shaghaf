@@ -21,8 +21,8 @@ abstract class Styles{
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle s17_white = SharedStyle.copyWith(
-    fontSize: 17,
+  static TextStyle s16_white = SharedStyle.copyWith(
+    fontSize: 16,
     color: Colors.white,
     fontWeight: FontWeight.w400,
   );

@@ -23,16 +23,12 @@ class OnboardingScreenBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Align(
-          alignment: Alignment.centerRight,
-          child: TextButton(
-            onPressed: (){},
-            child: Text("Skip",style: Styles.s17_white,),
-          ),
-        ),
+        SkipButton(),
+
 
       ],
     );
   }
 }
+
 
