@@ -42,7 +42,6 @@ class OnboardingSlide1 extends StatelessWidget {
                 duration: const Duration(milliseconds: 150),
                 onItemClicked: (value){
                   cubit.currentOnboarding = value;
-                  cubit.
                 },
               ),
               const CircularButton()
