@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:shaghaf/core/utils/assets.dart';
+
 import 'package:shaghaf/features/authentication/presentation/views/widgets/auth_appbar.dart';
+import 'package:shaghaf/features/authentication/presentation/views/widgets/login_screen_body.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SafeArea(
           child: Column(
             children: [
               AuthAppbar(),
+              SvgPicture.asset(Assets.kLogo2),
               LoginScreenBody()
             ],
           )
@@ -19,15 +22,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-class LoginScreenBody extends StatelessWidget {
-  const LoginScreenBody({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SvgPicture.asset(Assets.kLogoSvg)
-      ],
-    );
-  }
-}

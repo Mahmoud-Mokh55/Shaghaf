@@ -7,14 +7,14 @@ import 'package:shaghaf/features/splash_onboarding/presentation/manager/onboardi
 
 class CircularButton extends StatelessWidget {
   const CircularButton({super.key});
-
   @override
   Widget build(BuildContext context) {
     OnboardingCubit cubit = BlocProvider.of<OnboardingCubit>(context);
     return InkWell(
       onTap: (){
         if (cubit.currentOnboarding == 2){
-          context.go(AppRouter.kHomeView);
+          context.push(AppRouter.kLoginView);
+          BlocProvider.of<OnboardingCubit>(context).currentOnboarding=0;
         }else{
           cubit.currentOnboarding++;
         }
