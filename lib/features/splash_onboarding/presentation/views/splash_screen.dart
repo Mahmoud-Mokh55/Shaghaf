@@ -16,9 +16,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    //Todo: use sharedPreferences to show onboarding screen or not
     Timer(
         const Duration(seconds: 3),
-        (){context.go(AppRouter.kOnboard1View);}
+        (){context.go(AppRouter.kOnboardView);}
     );
   }
 

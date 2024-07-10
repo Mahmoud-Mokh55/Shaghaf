@@ -3,14 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 import 'package:shaghaf/core/utils/app_colors.dart';
-import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/splash_onboarding/presentation/manager/onboarding_cubit.dart';
 import 'package:shaghaf/features/splash_onboarding/presentation/manager/onboarding_states.dart';
 import 'package:shaghaf/features/splash_onboarding/presentation/views/widgets/circular_button.dart';
 
-class OnboardingSlide1 extends StatelessWidget {
-  const OnboardingSlide1({super.key});
+class OnboardingWidget extends StatelessWidget {
+  const OnboardingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

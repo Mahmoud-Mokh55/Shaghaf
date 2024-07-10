@@ -20,17 +20,13 @@ import 'package:shaghaf/features/photo_session/presentation/views/photo_session_
 import 'package:shaghaf/features/settings/presentation/views/contact_screen.dart';
 import 'package:shaghaf/features/settings/presentation/views/edit_profile_screen.dart';
 import 'package:shaghaf/features/settings/presentation/views/setting_screen.dart';
-import 'package:shaghaf/features/splash_onboarding/presentation/views/onboarding_01_screen.dart';
-import 'package:shaghaf/features/splash_onboarding/presentation/views/onboarding_02_screen.dart';
-import 'package:shaghaf/features/splash_onboarding/presentation/views/onboarding_03_screen.dart';
+import 'package:shaghaf/features/splash_onboarding/presentation/views/onboarding_screen.dart';
 import '../../features/authentication/presentation/views/forget_password_screen.dart';
 import '../../features/splash_onboarding/presentation/views/splash_screen.dart';
 
 abstract class AppRouter {
   static const kSplashView = "/";
-  static const kOnboard1View = "/onboard1View";
-  static const kOnboard2View = "/onboard2View";
-  static const kOnboard3View = "/onboard3View";
+  static const kOnboardView = "/onboard1View";
 
   static const kLoginView = "/loginView";
   static const kSignupView = "/signupView";
@@ -66,9 +62,7 @@ abstract class AppRouter {
   static final GoRouter router = GoRouter(
       routes: [
         GoRoute(path: kSplashView,builder: (context,state)=>const SplashScreen()),
-        GoRoute(path: kOnboard1View,builder: (context,state)=>const Onboarding01()),
-        GoRoute(path: kOnboard2View,builder: (context,state)=>const Onboarding02()),
-        GoRoute(path: kOnboard3View,builder: (context,state)=>const Onboarding03()),
+        GoRoute(path: kOnboardView,builder: (context,state)=>const Onboarding01()),
 
         GoRoute(path: kLoginView,builder: (context,state)=>const LoginScreen()),
         GoRoute(path: kSignupView,builder: (context,state)=>const SignupScreen()),

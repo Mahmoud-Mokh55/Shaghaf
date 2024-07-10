@@ -13,7 +13,7 @@ class OnboardingCubit extends Cubit<OnboardingStates>{
   set currentOnboarding(int value) {
     if (value>2) value = 2;
     _currentOnboarding = value;
-    emit(OnboardingStateChanged);
+    emit(OnboardingStateChanged());
   }
 
   final PageController onboardingController = PageController();
