@@ -4,18 +4,23 @@ import 'package:shaghaf/core/utils/app_colors.dart';
 import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 
-class MyTff extends StatelessWidget {
+class AuthTff extends StatelessWidget {
   final String title;
   final bool obscureText;
   final Widget prefixIcon;
   final String hintText;
-  const MyTff({super.key, required this.title, required this.obscureText, required this.prefixIcon, required this.hintText});
+  const AuthTff({super.key, required this.title, required this.obscureText, required this.prefixIcon, required this.hintText});
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.sizeOf(context).height;
     return Column(
       children: [
-        Text(title),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Text(title,style: Styles.s14_darkGrey,)
+        ),
+        SizedBox(height: height*0.012,),
         TextFormField(
           obscureText: obscureText,
           decoration: InputDecoration(
@@ -30,6 +35,7 @@ class MyTff extends StatelessWidget {
             hintStyle: Styles.s10_lightGrey
           ),
         ),
+        SizedBox(height: height*0.028,)
       ],
     );
   }

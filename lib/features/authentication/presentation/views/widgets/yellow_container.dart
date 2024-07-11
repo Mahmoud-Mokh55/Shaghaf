@@ -19,7 +19,7 @@ class YellowContainer extends StatelessWidget {
         vertical: 0.06*height
       ),
       decoration: BoxDecoration(
-        color: AppColors.kPaletteYellow.withOpacity(0.5),
+        color: AppColors.kPaletteYellow.withOpacity(0.3),
         borderRadius: BorderRadius.circular(16),
       ),
       child: child,
