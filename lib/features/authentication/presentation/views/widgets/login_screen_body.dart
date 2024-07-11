@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shaghaf/core/utils/app_colors.dart';
 import 'package:shaghaf/core/utils/assets.dart';
+import 'package:shaghaf/core/utils/styles.dart';
+import 'package:shaghaf/features/authentication/presentation/views/widgets/auth_button.dart';
+import 'package:shaghaf/features/authentication/presentation/views/widgets/auth_tff.dart';
+import 'package:shaghaf/features/authentication/presentation/views/widgets/login_screen_body.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/yellow_container.dart';
 
 class LoginScreenBody extends StatelessWidget {
@@ -16,8 +20,22 @@ class LoginScreenBody extends StatelessWidget {
         YellowContainer(
           child: Column(
             children: [
-              AuthTff(title: "Phone Number",obscureText: false, prefixIcon: Image.asset(Assets.phoneIcon,scale: 3.5,color: AppColors.kfadeGrey,), hintText: "Enter your phone number"),
-              AuthTff(title: "Password",obscureText: true, prefixIcon: Image.asset(Assets.passIcon,scale: 3.5,color: AppColors.kfadeGrey,), hintText: "Enter your password"),
+              AuthTff(
+                title: "Phone Number",
+                obscureText: false,
+                prefixIcon: Image.asset(Assets.phoneIcon,scale: 3.5,color: AppColors.kfadeGrey,),
+                hintText: "Enter your phone number"
+              ),
+              AuthTff(
+                title: "Password",
+                obscureText: true,
+                prefixIcon: Image.asset(Assets.passIcon,scale: 3.5,color: AppColors.kfadeGrey,),
+                hintText: "Enter your password",
+
+              ),
+              AuthButton(
+                onPressed: (){},
+                text: "LOGIN")
             ],
           )
         )
@@ -25,3 +43,5 @@ class LoginScreenBody extends StatelessWidget {
     );
   }
 }
+
+

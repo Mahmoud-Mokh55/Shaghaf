@@ -66,6 +66,13 @@ abstract class Styles{
     fontWeight: FontWeight.w400,
   );
 
+  static TextStyle s14_white = SharedStyle.copyWith(
+    fontSize: 14,
+    color: const Color(0xffFFFFFF),
+    fontWeight: FontWeight.w500,
+  );
+
+
   static TextStyle s16_lightGrey = SharedStyle.copyWith(
     fontSize: 16,
     color: Color(0xFFA1A8B0),

@@ -9,7 +9,8 @@ class AuthTff extends StatelessWidget {
   final bool obscureText;
   final Widget prefixIcon;
   final String hintText;
-  const AuthTff({super.key, required this.title, required this.obscureText, required this.prefixIcon, required this.hintText});
+  final bool belowSpace;
+  const AuthTff({super.key, required this.title, required this.obscureText, required this.prefixIcon, required this.hintText, required this.belowSpace});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,8 @@ class AuthTff extends StatelessWidget {
             hintStyle: Styles.s10_lightGrey
           ),
         ),
-        SizedBox(height: height*0.028,)
+        belowSpace?
+        SizedBox(height: height*0.028,) : const SizedBox()
       ],
     );
   }
