@@ -16,7 +16,7 @@ class LoginScreenBody extends StatelessWidget {
         const YellowContainer(
           child: Column(
             children: [
-              MyTff(obscureText: false, prefixIcon: Icons.call, hintText: "Enter your phone number")
+              MyTff(obscureText: false, prefixIcon: Icons.phone_outlined, hintText: "Enter your phone number")
             ],
           )
         )

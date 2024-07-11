@@ -17,6 +17,8 @@ class MyTff extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           gapPadding: 10
         ),
+        filled: true,
+        fillColor: Colors.white,
         prefixIcon: Icon(prefixIcon,color: AppColors.kfadeGrey,),
         hintText: hintText,
         hintStyle: Styles.s10_lightGrey
