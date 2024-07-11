@@ -7,10 +7,10 @@ import 'package:shaghaf/core/utils/styles.dart';
 class AuthTff extends StatelessWidget {
   final String title;
   final bool obscureText;
-  final Widget prefixIcon;
+  final String iconImage;
   final String hintText;
   final bool belowSpace;
-  const AuthTff({super.key, required this.title, required this.obscureText, required this.prefixIcon, required this.hintText, required this.belowSpace});
+  const AuthTff({super.key, required this.title, required this.obscureText, required this.iconImage, required this.hintText, required this.belowSpace});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class AuthTff extends StatelessWidget {
             ),
             filled: true,
             fillColor: Colors.white,
-            prefixIcon: prefixIcon,
+            prefixIcon: Image.asset(iconImage,scale: 3.5,color: AppColors.kfadeGrey,),
             hintText: hintText,
             hintStyle: Styles.s10_lightGrey
           ),

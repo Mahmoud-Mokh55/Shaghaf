@@ -22,7 +22,7 @@ class LoginScreenBody extends StatelessWidget {
               AuthTff(
                 title: "Phone Number",
                 obscureText: false,
-                prefixIcon: Image.asset(Assets.phoneIcon,scale: 3.5,color: AppColors.kfadeGrey,),
+
                 hintText: "Enter your phone number",
                 belowSpace: true,
               ),
