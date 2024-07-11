@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shaghaf/core/utils/app_colors.dart';
+import 'package:shaghaf/core/utils/app_router.dart';
 import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/auth_button.dart';
@@ -19,24 +21,26 @@ class LoginScreenBody extends StatelessWidget {
         YellowContainer(
           child: Column(
             children: [
-              AuthTff(
+              const AuthTff(
                 title: "Phone Number",
                 obscureText: false,
-
+                iconImage: Assets.phoneIcon,
                 hintText: "Enter your phone number",
                 belowSpace: true,
               ),
-              AuthTff(
+              const AuthTff(
                 title: "Password",
                 obscureText: true,
-                prefixIcon: Image.asset(Assets.passIcon,scale: 3.5,color: AppColors.kfadeGrey,),
+                iconImage: Assets.passIcon,
                 hintText: "Enter your password",
                 belowSpace: false,
               ),
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    context.push(AppRouter.kForgetView);
+                  },
                   child: Text("Forget Password?",style: Styles.s10_lightGrey,),
                 ),
               ),
@@ -49,7 +53,9 @@ class LoginScreenBody extends StatelessWidget {
               CenterTextButton(
                 text: "Don’t have an account? ",
                 textButton: "Sign up",
-                onTap: (){}
+                onTap: (){
+                  context.push(AppRouter.kSignupView);
+                }
               )
             ],
           )

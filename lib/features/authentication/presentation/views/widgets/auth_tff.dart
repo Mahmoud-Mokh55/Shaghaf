@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shaghaf/core/utils/app_colors.dart';
-import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 
 class AuthTff extends StatelessWidget {
@@ -10,7 +8,8 @@ class AuthTff extends StatelessWidget {
   final String iconImage;
   final String hintText;
   final bool belowSpace;
-  const AuthTff({super.key, required this.title, required this.obscureText, required this.iconImage, required this.hintText, required this.belowSpace});
+  final TextInputType? keyboardType;
+  const AuthTff({super.key, required this.title, required this.obscureText, required this.iconImage, required this.hintText, required this.belowSpace, this.keyboardType});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +22,7 @@ class AuthTff extends StatelessWidget {
         ),
         SizedBox(height: height*0.012,),
         TextFormField(
+          keyboardType: keyboardType,
           obscureText: obscureText,
           decoration: InputDecoration(
             border: OutlineInputBorder(

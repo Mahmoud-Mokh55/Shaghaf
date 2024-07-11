@@ -10,6 +10,10 @@ class AuthButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
+      padding: EdgeInsets.symmetric(
+        horizontal: MediaQuery.sizeOf(context).width*0.1,
+        vertical: MediaQuery.sizeOf(context).height*0.02
+      ),
       minWidth: double.infinity,
       height: MediaQuery.sizeOf(context).height*0.047,
       onPressed: onPressed,
