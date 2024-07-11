@@ -7,9 +7,7 @@ import 'package:shaghaf/features/splash_onboarding/presentation/manager/onboardi
 
 void main() {
   runApp(
-      DevicePreview(
-          builder: (context)=>const MyApp()
-      )
+      const MyApp()
   );
 }
 
