@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -19,12 +20,12 @@ class CircularButton extends StatelessWidget {
           cubit.currentOnboarding++;
         }
       },
-      child: const CircleAvatar(
-        radius: 40,
+      child: CircleAvatar(
+        radius: MediaQuery.sizeOf(context).height*0.05,
         backgroundColor:  AppColors.kCircleButtonColor,
         child: Icon(
           Icons.arrow_forward_sharp,
-          size: 35,
+          size: MediaQuery.sizeOf(context).height*0.04,
           color: Colors.white,),
       ),
     );

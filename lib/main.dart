@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shaghaf/core/utils/app_router.dart';
+import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/splash_onboarding/presentation/manager/onboarding_cubit.dart';
 
 void main() {
@@ -14,9 +15,9 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
+    Styles.context = context;
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context)=>OnboardingCubit())

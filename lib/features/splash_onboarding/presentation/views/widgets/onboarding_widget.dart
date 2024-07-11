@@ -19,9 +19,9 @@ class OnboardingWidget extends StatelessWidget {
     return BlocBuilder<OnboardingCubit,OnboardingStates>(
       builder: (context,state) {
         return Container(
-          height: height*0.74,
+          height: height*0.8,
           margin: EdgeInsets.symmetric(
-              vertical: height*0.05
+              vertical: height*0.02
           ),
           padding: EdgeInsets.symmetric(
             horizontal: width*0.1
@@ -29,13 +29,19 @@ class OnboardingWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(cubit.onboardingData[cubit.currentOnboarding].imagePath),
+              SizedBox(
+                height: height*0.41,
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: SvgPicture.asset(cubit.onboardingData[cubit.currentOnboarding].imagePath),
+                ),
+              ),
               Text(cubit.onboardingData[cubit.currentOnboarding].title,style: Styles.s20_white_bold,),
               Text(cubit.onboardingData[cubit.currentOnboarding].description,style: Styles.s16_yellow,textAlign: TextAlign.center,),
               PageViewDotIndicator(
                 count: 3,
                 currentItem: cubit.currentOnboarding,
-                size: const Size(15,15),
+                size: Size(height*0.02,height*0.02),
                 selectedColor: AppColors.kPaletteOrange,
                 unselectedColor: AppColors.kPaletteOrange.withOpacity(0.5),
                 duration: const Duration(milliseconds: 150),

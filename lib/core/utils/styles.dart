@@ -1,6 +1,22 @@
 import 'package:flutter/material.dart';
 
 abstract class Styles{
+  static late BuildContext context;
+  // function to edit font size to be responsive automatically
+  static double getResponsiveTextSize() {
+    double screenWidth = MediaQuery.of(context).size.width;
+    // Adjust the text size based on screen width
+    if (screenWidth <= 320) {
+      // Small screen (e.g., iPhone SE)
+      return 0.8;
+    } else if (screenWidth > 320 && screenWidth <= 480) {
+      // Medium screen (e.g., iPhone 6/7/8)
+      return 0.9;
+    } else {
+      // Large screen (e.g., iPhone Plus, iPad)
+      return 1;
+    }
+  }
 
   static const TextStyle SharedStyle =
     TextStyle(fontFamily: 'Comfortaa', letterSpacing: -0.3);
@@ -10,19 +26,19 @@ abstract class Styles{
   //------------------------\\
 
   static TextStyle s20_white_bold = SharedStyle.copyWith(
-    fontSize: 20,
+    fontSize: 20*getResponsiveTextSize(),
     color: Colors.white,
     fontWeight: FontWeight.w600,
   );
 
   static TextStyle s16_yellow = SharedStyle.copyWith(
-    fontSize: 16,
+    fontSize: 16*getResponsiveTextSize(),
     color: Color(0xFFFFC100),
     fontWeight: FontWeight.w400,
   );
 
   static TextStyle s16_white = SharedStyle.copyWith(
-    fontSize: 16,
+    fontSize: 16*getResponsiveTextSize(),
     color: Colors.white,
     fontWeight: FontWeight.w400,
   );
@@ -31,63 +47,63 @@ abstract class Styles{
   // Auth FONT STYLES
   //------------------------\\
   static TextStyle s10_lightGrey = SharedStyle.copyWith(
-    fontSize: 12,
+    fontSize: 12*getResponsiveTextSize(),
     color: const Color(0xFF969696),
     fontWeight: FontWeight.w400,
   );
 
   static TextStyle s12_white = SharedStyle.copyWith(
-    fontSize: 12,
+    fontSize: 12*getResponsiveTextSize(),
     color: Colors.white,
     fontWeight: FontWeight.w500,
   );
 
   static TextStyle s12_lightGrey = SharedStyle.copyWith(
-    fontSize: 12,
+    fontSize: 12*getResponsiveTextSize(),
     color: const Color(0xFF787878),
     fontWeight: FontWeight.w400,
   );
 
   static TextStyle s12_red = SharedStyle.copyWith(
-    fontSize: 12,
+    fontSize: 12*getResponsiveTextSize(),
     color: Color(0xFFF04C29),
     fontWeight: FontWeight.w500,
   );
 
   static TextStyle s12_black = SharedStyle.copyWith(
-    fontSize: 12,
+    fontSize: 12*getResponsiveTextSize(),
     color: Color(0xFF101623),
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
   );
 
   static TextStyle s14_darkGrey = SharedStyle.copyWith(
-    fontSize: 14,
+    fontSize: 14*getResponsiveTextSize(),
     color: Color(0xFF2F2F2F),
     fontWeight: FontWeight.w400,
   );
 
   static TextStyle s14_white = SharedStyle.copyWith(
-    fontSize: 14,
+    fontSize: 14*getResponsiveTextSize(),
     color: const Color(0xffFFFFFF),
     fontWeight: FontWeight.w500,
   );
 
 
   static TextStyle s16_lightGrey = SharedStyle.copyWith(
-    fontSize: 16,
+    fontSize: 16*getResponsiveTextSize(),
     color: Color(0xFFA1A8B0),
     fontWeight: FontWeight.w400,
   );
 
 
   static TextStyle s17_white = SharedStyle.copyWith(
-    fontSize: 17,
+    fontSize: 17*getResponsiveTextSize(),
     color: Colors.white,
     fontWeight: FontWeight.w500,
   );
 
   static TextStyle s20_black_bold = SharedStyle.copyWith(
-    fontSize: 20,
+    fontSize: 20*getResponsiveTextSize(),
     color: Color(0xFF101623),
     fontWeight: FontWeight.w700,
   );
@@ -98,13 +114,13 @@ abstract class Styles{
   //------------------------\\
 
   static TextStyle s20_grey = SharedStyle.copyWith(
-    fontSize: 20,
+    fontSize: 20*getResponsiveTextSize(),
     color: Color(0xFF383838),
     fontWeight: FontWeight.w400,
   );
 
   static TextStyle s10_olive = SharedStyle.copyWith(
-    fontSize: 20,
+    fontSize: 20*getResponsiveTextSize(),
     color: Color(0xFF5E5F60),
     fontWeight: FontWeight.w400,
   );

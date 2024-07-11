@@ -4,6 +4,7 @@ import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/auth_button.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/auth_tff.dart';
+import 'package:shaghaf/features/authentication/presentation/views/widgets/center_text_button.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/yellow_container.dart';
 
 class LoginScreenBody extends StatelessWidget {
@@ -15,7 +16,13 @@ class LoginScreenBody extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
     return Column(
       children: [
-        Image.asset(Assets.kLogo),
+        SizedBox(
+          height: height*0.278,
+          child: AspectRatio(
+            aspectRatio: 0.6,
+            child: Image.asset(Assets.kLogo),
+          ),
+        ),
         YellowContainer(
           child: Column(
             children: [
@@ -39,10 +46,18 @@ class LoginScreenBody extends StatelessWidget {
                   onPressed: (){},
                   child: Text("Forget Password?",style: Styles.s10_lightGrey,),
                 ),
-              ).
+              ),
+              SizedBox(height: height*0.02,),
               AuthButton(
                 onPressed: (){},
-                text: "LOGIN")
+                text: "LOGIN"
+              ),
+              SizedBox(height: height*0.019,),
+              CenterTextButton(
+                text: "Don’t have an account? ",
+                textButton: "Sign up",
+                onTap: (){}
+              )
             ],
           )
         )
