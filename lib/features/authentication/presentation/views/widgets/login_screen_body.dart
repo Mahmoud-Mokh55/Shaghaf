@@ -13,7 +13,7 @@ class LoginScreenBody extends StatelessWidget {
     return Column(
       children: [
         Image.asset(Assets.kLogo),
-        YellowContainer(
+        const YellowContainer(
           child: Column(
             children: [
               MyTff(obscureText: false, prefixIcon: Icons.call, hintText: "Enter your phone number")
