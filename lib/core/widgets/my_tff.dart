@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shaghaf/core/utils/app_colors.dart';
+import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 
 class MyTff extends StatelessWidget {
@@ -19,7 +21,7 @@ class MyTff extends StatelessWidget {
         ),
         filled: true,
         fillColor: Colors.white,
-        prefixIcon: Icon(prefixIcon,color: AppColors.kfadeGrey,),
+        prefixIcon: SvgPicture.asset(Assets.phoneIcon,width: 30,height: 30,),
         hintText: hintText,
         hintStyle: Styles.s10_lightGrey
       ),
