@@ -21,7 +21,7 @@ class MyTff extends StatelessWidget {
         ),
         filled: true,
         fillColor: Colors.white,
-        prefixIcon: SvgPicture.asset(Assets.phoneIcon,width: 30,height: 30,),
+        prefixIcon: ImageIcon(AssetImage(Assets.phoneIcon)),
         hintText: hintText,
         hintStyle: Styles.s10_lightGrey
       ),
