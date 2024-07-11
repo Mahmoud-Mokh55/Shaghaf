@@ -4,7 +4,6 @@ import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/auth_button.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/auth_tff.dart';
-import 'package:shaghaf/features/authentication/presentation/views/widgets/login_screen_body.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/yellow_container.dart';
 
 class LoginScreenBody extends StatelessWidget {
@@ -24,15 +23,23 @@ class LoginScreenBody extends StatelessWidget {
                 title: "Phone Number",
                 obscureText: false,
                 prefixIcon: Image.asset(Assets.phoneIcon,scale: 3.5,color: AppColors.kfadeGrey,),
-                hintText: "Enter your phone number"
+                hintText: "Enter your phone number",
+                belowSpace: true,
               ),
               AuthTff(
                 title: "Password",
                 obscureText: true,
                 prefixIcon: Image.asset(Assets.passIcon,scale: 3.5,color: AppColors.kfadeGrey,),
                 hintText: "Enter your password",
-
+                belowSpace: false,
               ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  onPressed: (){},
+                  child: Text("Forget Password?",style: Styles.s10_lightGrey,),
+                ),
+              ).
               AuthButton(
                 onPressed: (){},
                 text: "LOGIN")
