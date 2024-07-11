@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class MyTff extends StatelessWidget {
   final bool obscureText;
+  final IconData prefixIcon;
+  final String hintText;
   const MyTff({super.key, required this.obscureText});
 
   @override
@@ -9,7 +11,12 @@ class MyTff extends StatelessWidget {
     return TextFormField(
       obscureText: obscureText,
       decoration: InputDecoration(
-        border: OutlineInputBorder()
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          gapPadding: 10
+        ),
+        prefixIcon: Icon(prefixIcon,color: ,),
+        hintText: hintText
       ),
     );
   }
