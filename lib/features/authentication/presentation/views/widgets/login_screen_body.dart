@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:shaghaf/core/utils/assets.dart';
 
 class LoginScreenBody extends StatelessWidget {
@@ -9,10 +8,8 @@ class LoginScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // SvgPicture.asset(Assets.kLogoSvg),
         Image.asset(Assets.kLogo),
-        SvgPicture.asset(Assets.out),
-
+        MyTff
       ],
     );
   }
