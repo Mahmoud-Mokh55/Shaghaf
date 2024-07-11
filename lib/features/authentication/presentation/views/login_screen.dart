@@ -11,12 +11,15 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  const Scaffold(
       body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               AuthAppbar(),
+              AuthLogo(),
               LoginScreenBody()
             ],
-          )
+          ),
+        ),
       ),
     );
   }

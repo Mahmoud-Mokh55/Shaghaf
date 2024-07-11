@@ -16,13 +16,6 @@ class LoginScreenBody extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
     return Column(
       children: [
-        SizedBox(
-          height: height*0.278,
-          child: AspectRatio(
-            aspectRatio: 0.6,
-            child: Image.asset(Assets.kLogo),
-          ),
-        ),
         YellowContainer(
           child: Column(
             children: [
