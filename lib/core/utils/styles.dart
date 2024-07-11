@@ -31,8 +31,9 @@ abstract class Styles{
   // Auth FONT STYLES
   //------------------------\\
   static TextStyle s10_lightGrey = SharedStyle.copyWith(
-    fontSize: 10,
-    color: Color(0xFF969696),
+    fontSize: 15,
+    height: 11.15,
+    color: const Color(0xFF969696),
     fontWeight: FontWeight.w400,
   );
 
@@ -44,7 +45,7 @@ abstract class Styles{
 
   static TextStyle s12_lightGrey = SharedStyle.copyWith(
     fontSize: 12,
-    color: Color(0xFF787878),
+    color: const Color(0xFF787878),
     fontWeight: FontWeight.w400,
   );
 
