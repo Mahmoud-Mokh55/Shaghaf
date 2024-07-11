@@ -6,7 +6,7 @@ import 'package:shaghaf/core/utils/styles.dart';
 
 class MyTff extends StatelessWidget {
   final bool obscureText;
-  final IconData prefixIcon;
+  final Widget prefixIcon;
   final String hintText;
   const MyTff({super.key, required this.obscureText, required this.prefixIcon, required this.hintText});
 
@@ -21,7 +21,7 @@ class MyTff extends StatelessWidget {
         ),
         filled: true,
         fillColor: Colors.white,
-        prefixIcon: ImageIcon(AssetImage(Assets.phoneIcon)),
+        prefixIcon: prefixIcon,
         hintText: hintText,
         hintStyle: Styles.s10_lightGrey
       ),

@@ -7,5 +7,5 @@ class Assets{
   static const String kOnboarding3 = "assets/images/onboarding3.svg";
   static const String phoneIcon = "assets/images/phone_icon.png";
   static const String accIcon = "assets/images/acc_icon.png";
-  static const String pass_icon = "assets/images/pass_icon.png";
+  static const String passIcon = "assets/images/pass_icon.png";
 }
