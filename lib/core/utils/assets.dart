@@ -5,4 +5,5 @@ class Assets{
   static const String kOnboarding1 = "assets/images/onboarding1.svg";
   static const String kOnboarding2 = "assets/images/onboarding2.svg";
   static const String kOnboarding3 = "assets/images/onboarding3.svg";
+  static const String out = "assets/images/output.svg";
 }

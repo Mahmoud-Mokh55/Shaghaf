@@ -11,7 +11,7 @@ class LoginScreenBody extends StatelessWidget {
       children: [
         // SvgPicture.asset(Assets.kLogoSvg),
         Image.asset(Assets.kLogo),
-        SvgPicture.asset(Assets.kLogo2),
+        SvgPicture.asset(Assets.out),
 
       ],
     );
